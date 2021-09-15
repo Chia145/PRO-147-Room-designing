@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene >
+
+        <a-camera position='0 0 -1'></a-camera>
+
+        <a-assets timeout="2500">
+            <a-asset-item id="sofa" src="./sofa/scene.gltf"></a-asset-item>
+            <a-asset-item id="table" src="./table/scene.gltf"></a-asset-item>
+            <a-asset-item id="plant" src="./plant/scene.gltf"></a-asset-item>
+        </a-assets>
+        <a-plane position = "0 -1.5 -6" src = './floor.png'  rotation = '-90 0 0' width = '7' height = '5' color = '#994c0c'></a-plane>
+        <a-plane position = "0 -1.4 -5" src = './carpet.jpg'  rotation = '-90 0 0' width = '5' height = '3' ></a-plane>
+        <a-plane position = "0 0 -8.5" rotation = '0 0 0' width = '7' height = '3' color = "#f0a330"></a-plane>
+        <a-plane position = "0 1.5 -6" rotation = '90 0 0' width = '7' height = '5' color = 'grey'></a-plane>
+        <a-plane position = "3.5 0 -6" rotation = '180 450 180' width = '5' height = '3' color = "#f0a330"></a-plane>
+        <a-plane position = "-3.5 0 -6" rotation = '0 450 0' width = '5' height = '3' color = "#f0a330"></a-plane>
+        <a-entity position="0 -0.9 -7" rotation="0 0 0" scale = '2 2 2'  gltf-model="#sofa" shadow="cast: true; receive: false"></a-entity>
+        <a-cone position = '0 1.25 -6' radius-bottom = '0.5' radius-top = '0.15' height = '0.5' color = 'lightblue'></a-cone>
+        <a-sphere position = '0 1.05 -6' radius = '0.2' color = 'yellow'></a-sphere>
+        <a-plane position = "3.4 0 -6" src = './art1.png' rotation = '180 450 180' width = '3' height = '2.5' ></a-plane>
+        <a-plane position = "-3.4 0 -6" src = './art2.jpg' rotation = '0 450 0' width = '3' height = '2.5' ></a-plane>
+        <a-entity position="0 -1.4 -4.5" rotation="0 0 0" scale = '0.15 0.15 0.15'  gltf-model="#table" shadow="cast: true; receive: false"></a-entity>
+        <a-entity position="2 -1.4 -5.5" rotation="0 0 0" scale = '0.15 0.15 0.15'  gltf-model="#plant" shadow="cast: true; receive: false"></a-entity>
+        <a-entity position="-2 -1.4 -5.5" rotation="0 0 0" scale = '0.15 0.15 0.15'  gltf-model="#plant" shadow="cast: true; receive: false"></a-entity>
+        <a-sphere position = '2.6 -1.2 -4' src= './bg.jpg' radius = '0.2' color = 'white'></a-sphere>
+    </a-scene>
+</body>
+
+</html>
